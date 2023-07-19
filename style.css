@@ -1,0 +1,1998 @@
+.main_loginpage_div {
+    display: flex;
+}
+.loginpage_left_div {
+    width: 50%;
+}
+.loginpage_right_div {
+    width: 50%;
+}
+form#cdo_login_form div {
+    display: block!important;
+}
+form#cdo_login_form div div {
+    display: inline-block;
+    width: 49%;
+}
+form#cdo_login_form div div:first-child label {
+    display: block;
+    float: left;
+}
+.error{ justify-self: center;color: red;}
+#confirm_check{ width:auto;}
+.cdo-form{
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 60%;
+    margin: 2rem auto;
+    color: black;
+}
+.cdo-test{
+background-color: black;
+}
+.cdo-form h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.cdo-form a{
+    color: black;
+    font-size: 15px;
+    /*text-decoration: underline;*/
+}
+.cdo-form p{
+    font-size: 20px;
+}
+.cdo-form option{
+    padding: 10px;
+}
+.cdo-form form.cdo-form_div{
+    /* direction: rtl; */
+    text-align: initial;
+}
+.required-fields{ color:red;}
+.cdo-form .cdo-google{
+    background: white;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    border: 2px solid #d2d2d2;
+    border-radius: 4px;
+    font-size: 25px;
+}
+.cdo-form form.cdo-form_div div i.fa-light.fa-eye-slash{
+    position: absolute;
+    right: -27px;
+    top: 25%;
+}
+.cdo-form form.cdo-form_div div .fa-eye-slash:before {
+    font-family: 'Font Awesome 5 Free';
+    font-style: initial;
+}
+.cdo-form_register{
+    background: #dbf0ff;
+    border: 2px solid #5ab9ff;
+}
+.cdo-account_link{
+    justify-items: center;
+}
+.cdo-form form.cdo-form_div div input{
+    text-align-last: left;
+}
+.cdo-google .fa-google{
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+}
+.cdo-form form.cdo-form_div div {
+    gap: 2rem;
+    margin: 5px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 2%;
+    text-align-last: end;
+    position: relative;
+    padding-bottom: 0px;
+}
+.cdo-form form.cdo-form_div div label {
+    font-size: 13px;
+    white-space: nowrap;
+}
+.cdo-form form.cdo-form_div div input, .cdo-form form.cdo-form_div div select{
+    background: white;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    height: fit-content;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+}
+.cdo-form form.cdo-form_div .cdo-form_button {
+    justify-content: center;
+    display: flex;
+    padding: 10px 0px;
+}
+.cdo-form.cdo-form_register form.cdo-form_div .cdo-form_button{
+    /* direction: ltr; */
+}
+.cdo-form form.cdo-form_div .cdo-form_button button{
+    background: #e6e6e6;
+    border: 2px solid #b8b8b8;
+    border-radius: 5rem;
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 600;
+}
+.cdo-form.cdo-form_register form.cdo-form_div .cdo-form_button, .cdo-form.cdo-form_register form.cdo-form_div{
+    margin-bottom: 0;
+}
+.cdo-flex_form div.cdo-para {
+    width: 100% !important;
+}
+/********************FORM LOGIN*********************/
+body .cdo-form.cdo-form_login {
+    background: #f5fbff;
+    border: 2px solid #d2ecff;
+    padding: 20px 3rem;
+    max-width: 550px;
+}
+.cdo-form.cdo-form_login #cdo_login_form .cdo-account_button.cdo-account_link {
+    display: grid;
+    grid-template-columns: auto 5% 56%;
+    grid-template-areas: 'aone empty atwo';
+    justify-items: end;
+    gap: 1%;
+}
+.cdo-form.cdo-form_login form.cdo-form_div#cdo_login_form div{
+    grid-template-columns: 36% 60%;
+    gap: 0 4%;
+}
+.cdo-form.cdo-form_login .cdo-account_button{
+    justify-content: space-between;
+    
+}
+#show_loginerrors{
+    padding: 15px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: left;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99999;
+  }
+  #show_loginerrors.show_err_mess {
+    background: antiquewhite;
+    color: red;
+    animation: hide_notification 3s forwards;
+}
+#show_loginerrors.show_success_mess {
+    background: #b8dcb8;
+    color: green;
+    animation: hide_notification_success 2s forwards;
+}
+.cdo-form.cdo-added_as_lecture_to_session form.cdo-form_div .cdo-para {
+    position: relative;
+    display: block;
+    margin: 0px;
+}
+.cdo-form.cdo-added_as_lecture_to_session form.cdo-form_div .cdo-para p {
+    font-size: 10px;
+    left: 0;
+    line-height: 13px;
+    text-align-last: left;
+    padding-left: 0 !important; 
+    margin-bottom: 0px;
+    padding-top: 0px !important;
+}
+  @keyframes hide_notification{
+    0%   {opacity: 1;}
+    70%   {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  @keyframes hide_notification_success{
+    0%   {opacity: 1;}
+    70%   {opacity: 1;}
+    100% {opacity: 0;}
+  }
+ /********************Session Proposal Form*********************/ 
+  .cdo-form_div textarea#cdo_sessionabstract_en_SP
+{
+    text-align-last: left;
+    color: #000;
+    font-size: 15px;
+    padding: 5px;
+}
+.cdo-form_div textarea#cdo_sessionabstract_pt_SP {
+    color: #000;
+    font-size: 15px;
+    padding: 5px;
+    height: 89px;
+}
+ /********************Session Lecture Form*********************/ 
+#added_as_lecture_to_session textarea#cdo_secondLectureEnglishBiography_en_SL{  text-align-last: left;color: #000;  font-size: 15px;    padding: 5px;}
+#added_as_lecture_to_session textarea#cdo_secondLectureHebrewBiography_pt_SL{color: #000;font-size: 15px;padding: 5px;}
+#added_as_lecture_to_session textarea#w3review{  color: #000;  font-size: 15px;    padding: 5px;}
+#added_as_lecture_to_session textarea#w3review2{  color: #000;  font-size: 15px;    padding: 5px;}
+#added_as_lecture_to_session textarea#cdo_sessionLecture_abstract_en_SL{text-align-last: left;color: #000;font-size: 15px;padding: 5px;}
+#added_as_lecture_to_session textarea#cdo_sessionLecture_biography_en_SL{text-align-last: left;color: #000;font-size: 15px;padding: 5px;}
+#added_as_lecture_to_session textarea#cdo_sessionLecture_abstract_pt_SL{color: #000;font-size: 15px;padding: 5px;height: 88px;}
+#added_as_lecture_to_session textarea#cdo_sessionLecture_biography_pt_SL{color: #000;font-size: 15px;padding: 5px; height: 88px;}
+/********************NEW MEMBER*********************/
+.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-flex_form{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 2%;
+    margin: 0;
+    padding: 0 2%;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 2%;
+    text-align-last: end;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-para{
+    position: relative;
+    display: block;
+	margin:0px;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-para p{
+    font-size: 10px;
+    left: 0;
+    line-height: 13px;
+    text-align-last: left;
+    padding-left: 0 !important;
+    margin-right: -68px;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-radio_role{
+    grid-template-columns: 49% 7% 30% 7%;
+    align-items: center;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-radio_role.cdo-grid_para{
+    grid-template-columns: 49% 16% 8% 14% 7%;
+    align-items: center;
+}
+.cdo-form form.cdo-form_div .cdo-form_button button:first-child{
+    justify-self: right;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-block_form{
+    display: block;
+    padding: 0 2%;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-block_form div{
+    grid-template-columns: 23% 75%;
+}
+.cdo-form.cdo-new_member_form form.cdo-form_div div input, .cdo-form.cdo-new_member_form form.cdo-form_div div select{
+    width: 100%;
+    padding: 10px;
+    text-align-last: left;
+    color: black;
+    font-size: 15px;
+}
+.cdo-form.cdo-new_member_form{
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+.cdo-form form.cdo-form_div div .cdo-radio_role input[type='radio'] {
+    -webkit-appearance: none;
+    width: 30px !important;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: 3px solid #cccccc;
+    position: relative;
+}
+
+.cdo-form form.cdo-form_div div .cdo-radio_role input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid #cccccc;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cdo-form form.cdo-form_div div .cdo-radio_role input[type="radio"]:checked:before {
+    background: #cccccc;
+}
+
+.cdo-form form.cdo-form_div div .cdo-radio_role input[type="radio"]:checked {
+  border-color:#cccccc;
+}
+
+.cdo-form form.cdo-form_div div select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }  
+.cdo-form form.cdo-form_div div select.classic {
+    background-image: linear-gradient(45deg, transparent 50%, #757575 50%),
+    linear-gradient(135deg, #757575 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      100% 0;
+    background-size: 5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+    text-align-last: auto;
+}
+  .cdo-form form.cdo-form_div div select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+  /********************SINGLE_LECTURE_PROPOSAL_FORM*********************/
+  .cdo-form.cdo-single_lecture_proposal_form {
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+body .cdo-form.cdo-single_lecture_proposal_form .cdo_grid_form div {
+    grid-template-columns: auto!important;
+    text-align-last: left!important;
+    grid-gap: 10px!important;
+}
+.cdo_grid_form div select.classic, .cdo_grid_form div input {
+    padding: 10px;
+}
+.cdo-form form.cdo-form_div .cdo_grid_form {
+    grid-template-columns: 18% 22% 22% 30%;
+    width: 90%;
+    margin: 0px 0px 0px auto;
+    padding: 0 0 0 2%;
+}
+.cdo-form form.cdo-form_div div select {
+   padding: 10px;
+}
+.cdo-flex_form div {
+    width: 93%!important;
+}
+.cdo-para_single {
+    display: block!important;
+    width: 50%!important;
+    padding: 0px 10px;
+   }
+.cdo-para_single p {
+    font-size: 12px;
+    text-align: center;
+    text-align-last: center;
+}
+ #spinner-div {
+    position: absolute;
+    border: 0;
+    color: #0065A1;
+    z-index: 9999;
+    display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.spinner-border{
+position: absolute;
+display: inline-block;
+width: 2rem;
+height: 2rem;
+vertical-align: -0.125em;
+border: 0.25em solid currentColor;
+border-right-color: transparent;
+border-radius: 50%;
+-webkit-animation: .75s linear infinite spinner-border;
+animation: .75s linear infinite spinner-border;
+top: 50%;
+left: 50%;
+}
+@keyframes spinner-border {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.second_lecture {
+    border: 1px solid yellow;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+.single_proposal_form {
+    grid-template-columns: 23% 75%;
+}
+.cdo_proposal_form {
+    display: block!important;
+    background-color: red;
+    border: 1px solid #000;
+}
+.cdo_proposal_form {
+    display: block!important;
+    border-radius: 10px;
+    background-color: #fffcf1;
+    border: 1px solid #ffe8a3;
+    padding-bottom: 15px!important;
+}
+.proposal_content p {
+    width: 100%;
+    grid-column: span 2;
+    text-align-last: center;
+    font-size: 15px;
+    margin:0px;
+}
+.cdo-para_single.single_lecture_form_text {
+    grid-column: span 3;
+}
+.cdo-flex_form.text_info_right {
+    grid-template-columns: 18% 22% 22% 30%!important;
+    width: 75%!important;
+}
+p.cdo_text_info {
+    position: absolute;
+    font-size: 12px;
+    margin-left: 277px;
+    width: 75%;
+    text-align-last: center;
+    margin-top: -10px;
+    line-height: 20px;
+    top:12px;
+}
+.email_address {
+    grid-template-columns: 23% 73.3%!important;
+}
+.cdo-para_single {
+    width: 75%!important;
+    margin-left: 206px!important;
+}
+.cdo_grid_form.border {
+    border-radius: 10px;
+    margin-right: -10px;
+    background-color: #fffcf1;
+    border: 1px solid #ffe8a3;
+}
+p.cdo_text_info_hebrew {
+    position: absolute;
+    font-size: 12px;
+    margin-left: 485px;
+    width: 75%;
+    text-align-last: center;
+    margin-top: -10px;
+    line-height: 10px;
+}
+/********************SESSION_PROPOSAL_FORM*********************/
+.cdo-form.cdo-session_proposal_form {
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+.cdo-form form.cdo-form_div .cdo_sess_proposal_form {
+    grid-template-columns: 18% 22% 22% 30%;
+    width: 77%;
+    margin: 0px 0px 0px auto;
+    padding: 0 0 0 2%;
+    display: grid!important;
+    padding-bottom: 20px;
+}
+body .cdo-form.cdo-session_proposal_form .cdo_sess_proposal_form div {
+    grid-template-columns: auto!important;
+    text-align-last: left!important;
+    grid-gap: 10px!important;
+}
+.cdo_sess_proposal_form.border {
+    border-radius: 10px;
+    margin-right: -10px;
+    background-color: #fffcf1;
+    border: 1px solid #ffe8a3;
+}
+.cdo_sess_proposal_form.border:before {
+    position: absolute;
+    top: 53%;
+    left: -13%;
+    font-size: 15px;
+}
+.cdo-flex_form.bottom_second_row_form {
+    grid-template-columns: 11% 16% 21% 19% 23%!important;
+    align-items: baseline;
+}
+.cdo-flex_form.bottom_second_row_form div {
+    grid-template-columns: auto!important;
+    text-align-last: left!important;
+}
+/********************ADDED_AS_LECTURE_TO_SESSION*********************/
+.cdo-form.cdo-added_as_lecture_to_session {
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+.cdo-form form.cdo-form_div .cdo_lecture_to_session_form {
+    grid-template-columns: 18% 22% 22% 30%;
+    width: 77%;
+    margin: 0px 0px 0px auto;
+    padding: 0 0 0 2%;
+}
+body .cdo-form.cdo-added_as_lecture_to_session .cdo_lecture_to_session_form div {
+       grid-template-columns: auto!important;
+    text-align-last: left!important;
+    grid-gap: 10px!important;
+    height: fit-content;
+}
+.cdo_lecture_to_session_form.border {
+    border-radius: 10px;
+    background-color: #fffcf1;
+    border: 1px solid #ffe8a3;
+}
+.cdo-form form.cdo-form_div .cdo_lecture_to_session_form:before {
+   position: absolute;
+    top: 53%;
+    left: -14%;
+    font-size: 15px;
+	display:none;
+}
+.cdo_lecture_to_session_form.cdo_single_lecture_form_mobile:before {
+    display:block!important;
+}
+.cdo-form form.cdo-form_div#cdo_login_form div, .cdo-form form.cdo-form_div#cdo_register_form div, .cdo-form form.cdo-form_div#cdo_forgotPassword_form div, .cdo-form form.cdo-form_div#cdo_updatememberform div,.cdo-form form.cdo-form_div#cdo_singleLectureProposalForm div.form_error,.cdo-form form.cdo-form_div#Recommender_form div.form_error,.cdo-form form.cdo-form_div#cdo_re__password-error div.form_error,.cdo-form form.cdo-form_div#cdo_re__password-error div.form_error,.cdo-form form.cdo-form_div#cdo_session_proposal_form div.form_error,.cdo-form form.cdo-form_div#added_as_lecture_to_session div.form_error{
+    grid-template-areas:
+        'label input'
+        'zempty error_label';
+}
+.cdo-form form.cdo-form_div#cdo_login_form div:after, .cdo-form form.cdo-form_div#cdo_register_form div:after, .cdo-form form.cdo-form_div#cdo_forgotPassword_form div:after, .cdo-form form.cdo-form_div#cdo_updatememberform div:after, .cdo-form form.cdo-form_div#cdo_singleLectureProposalForm div.form_error:after,.cdo-form form.cdo-form_div#Recommender_form div.form_error:after,.cdo-form form.cdo-form_div#cdo_re__password-error div.form_error:after,.cdo-form form.cdo-form_div#cdo_session_proposal_form div.form_error:after,.cdo-form form.cdo-form_div#added_as_lecture_to_session div.form_error:after {
+    content: "";
+    grid-area: empty;
+}
+.cdo-form form.cdo-form_div#cdo_login_form div label:first-child, .cdo-form form.cdo-form_div#cdo_register_form div label:first-child, .cdo-form form.cdo-form_div#cdo_forgotPassword_form div label:first-child, .cdo-form form.cdo-form_div#cdo_updatememberform div label:first-child,.cdo-form form.cdo-form_div#cdo_singleLectureProposalForm div.form_error label:first-child,.cdo-form form.cdo-form_div#Recommender_form div.form_error label:first-child,.cdo-form form.cdo-form_div#cdo_re__password-error div.form_error label:first-child,.cdo-form form.cdo-form_div#cdo_session_proposal_form div.form_error label:first-child,.cdo-form form.cdo-form_div#added_as_lecture_to_session div.form_error label:first-child{
+    grid-area: label;
+}
+.cdo-form form.cdo-form_div#cdo_login_form div input, .cdo-form form.cdo-form_div#cdo_register_form div input, .cdo-form form.cdo-form_div#cdo_forgotPassword_form div input, .cdo-form form.cdo-form_div#cdo_updatememberform div input, .cdo-form form.cdo-form_div#cdo_updatememberform div select,.cdo-form form.cdo-form_div#cdo_singleLectureProposalForm div.form_error select,.cdo-form form.cdo-form_div#Recommender_form div.form_error select,.cdo-form form.cdo-form_div#cdo_re__password-error div.form_error select,.cdo-form form.cdo-form_div#cdo_session_proposal_form div.form_error select,.cdo-form form.cdo-form_div#added_as_lecture_to_session div.form_error select{
+    grid-area: input;
+}
+
+.cdo-form form.cdo-form_div#cdo_login_form div label:last-child, .cdo-form form.cdo-form_div#cdo_register_form div label:last-child, .cdo-form form.cdo-form_div#cdo_forgotPassword_form div label:last-child, .cdo-form form.cdo-form_div#cdo_updatememberform div label:last-child,.cdo-form form.cdo-form_div#cdo_singleLectureProposalForm div.form_error label:last-child,.cdo-form form.cdo-form_div#Recommender_form div.form_error label:last-child,.cdo-form form.cdo-form_div#cdo_re__password-error div.form_error label:last-child,.cdo-form form.cdo-form_div#cdo_session_proposal_form div.form_error label:last-child,.cdo-form form.cdo-form_div#added_as_lecture_to_session div.form_error label:last-child{
+    grid-area: error_label;
+    justify-self: left!important;
+    color: red;
+}
+/********************PROPOSAL_SESSION_REVIEW*********************/
+.cdo-form.cdo-proposal_session_review_form {
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+
+.cdo-form form.cdo-form_div .cdo_proposal_session_review {
+    grid-template-columns: 18% 22% 22% 30%;
+    width: 77%;
+    margin: 0px 0px 0px auto;
+    padding: 0 0 0 2%;
+}
+
+body .cdo-form.cdo-proposal_session_review_form .cdo_proposal_session_review div {
+    grid-template-columns: auto!important;
+    text-align-last: left!important;
+    grid-gap: 10px!important;
+}
+.cdo-form form.cdo-form_div div.cdo-flex_form_heading, .cdo-form form.cdo-form_div div.cdo-flex_form_heading div {
+    display: block;
+    text-align-last: left;
+    padding: 0px 35px;
+}
+
+.cdo-form form.cdo-form_div#cdo_updatememberform div.cdo-radio_role label, .cdo-form form.cdo-form_div#cdo_updatememberform div.cdo-radio_role input{
+    grid-area: unset;
+}
+.cdo-form.cdo-proposal_session_review_form .cdo-form_div div {
+   	margin: 5px auto;
+   }
+.cdo-form form.cdo-form_div div.cdo-flex_form_heading, .cdo-form form.cdo-form_div div.cdo-flex_form_heading div h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.cdo-form form.cdo-form_div div select.classic.dropdown_menu {
+    height: fit-content;
+}
+.cdo-flex_form.cdo_top_title_heading {
+    margin-top: 30px!important;
+}
+.cdo-form.cdo-proposal_session_review_form .cdo-form_div .cdo-form_button {
+    justify-content: center;
+    display: flex;
+    padding-top: 20px;
+}
+.cdo-form.cdo-proposal_session_review_form .cdo-form_div .cdo-form_button button {
+    background: #e6e6e6;
+    border: 2px solid #b8b8b8;
+    border-radius: 20px;
+    padding: 15px 30px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 600;
+}
+.email_address_proposal_session_review {
+    grid-template-columns: 23% 73.3%!important;
+}
+.cdo-flex_form.dropdown_top_right_menu:before {
+    content: "";
+}
+.sidebar {
+    width: 16%;
+    margin-top: 32px!important;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #23282d!important;
+    position: fixed;
+    height: auto;
+    overflow: auto;
+   
+  }
+  
+  .sidebar a {
+    display: block;
+    color: #fff;
+    padding: 16px 10px;
+    text-decoration: none;
+    width: 200px;
+    border-bottom: 1px solid #e0dede;
+}
+   
+  .sidebar a.active {
+    color: #fff;
+    width: 200px;
+}
+  
+.sidebar a:hover:not(.active) {
+    width: 200px;
+    background-color: #191e23;
+    color: #2885b4;
+}
+/********************RECOMMENTION_FORM*********************/
+
+p.cdo_text_inf_orecommention_form {
+    font-size: 12px;
+    margin-left: 0px;
+    width: 74%;
+    float: right;
+    margin-top: 10px;
+    line-height: 22px;
+    padding-right: 5%;
+    text-align-last: left;
+}
+.cdo-flex_form.recommention_form_content {
+    display: block!important;
+}
+p.cdo_text_inf_orecommention_form.second_text_info {
+    margin-top: -10px;
+}
+.cdo_email_address_recommention_form {
+    grid-template-columns: 23% 73.3%!important;
+}
+/********************PROPOSAL_LECTURE_REVIEW*********************/
+.cdo-form.cdo-proposal_lecture_review_form {
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+
+.cdo-form.cdo-proposal_lecture_review_form .cdo-form_div div {
+    margin: 5px auto;
+}
+
+.cdo-flex_form.dropdown_top_right_lecture_review:before {
+    content: "";
+}
+.cdo-form form.cdo-form_div div.cdo-flex_form_heading_lecture {
+    display: block;
+    text-align-last: left;
+    margin: 0px -110px;
+}
+.cdo-form.cdo-proposal_submission_selection_form {
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+/********************PROPOSAL_SUBMISSION_SELECTION*********************/
+.cdo_radio_button_form {
+    display: flex!important;
+}
+.cdo_submission_checkbox_content p {
+    font-size: 10px;
+    margin:0px;
+}
+.cdo_submission_checkbox_content {
+    grid-template-columns: auto!important;
+    text-align-last: auto!important;
+}
+.cdo-flex_form.cdo_submission_top {
+    display: block!important;
+}
+.form-check.cdo_submission_checkbox {
+    grid-template-columns: 8% 81%!important;
+    display: grid!important;
+}
+.cdo_submission_checkbox_content label.form-check-label {
+    text-align: left!important;
+	}
+/********************REVIEW_LECTURE_PROPOSALS*********************/ 
+.cdo-form.cdo-review_lecture_proposals_form {
+    background: #fff2df;
+    border: 2px solid #ffb144;
+    width: 100%;
+}
+.cdo-form.cdo-review_lecture_proposals_form h4 {
+    text-align: left;
+    margin: 0px;
+}
+.review_lecture_proposal_subtitle p {
+    font-size: 15px;
+    text-align-last: left;
+    margin: 0px;
+}
+.review_lecture_proposal_subtitle p {
+    font-size: 15px;
+    float: left;
+    margin: 0px;
+    display: inline-block;
+    padding-right: 59px;
+}
+.review_lecture_proposal_boxes {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+}
+.review_lecture_proposal_boxes p {
+    
+}
+.lecture_abstract_keyboard {
+    display: flex;
+    width: 100%;
+}
+.lecture_abstract_left {
+width: 50%;
+}
+.lecture_abstract_left p:last-child {
+    height: 100px;
+    overflow-y: scroll;
+    text-align: left;
+    margin-top: 10px;
+}
+.lecture_form {
+    display: flex;
+}
+.lecture_form_left {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.cdo_radio_button_form_lecture {
+    display: flex!important;
+}
+.cdo-flex_form.cdo_submission_top_lecture {
+    display: block!important;
+    width: 50%;
+    float: left;
+}
+.form-check.cdo_submission_checkbox_lecture {
+    grid-template-columns: 8% 81%!important;
+    display: grid!important;
+}
+.cdo_submission_checkbox_content_lecture {
+    grid-template-columns: auto!important;
+    text-align-last: auto!important;
+}
+.cdo_submission_checkbox_content_lecture label.form-check-label {
+    text-align: left!important;
+}
+.cdo_submission_checkbox_content_lecture p {
+    font-size: 12px;
+    margin: 0px;
+}
+.review_lecture_proposal_radio_button_div {
+    display: flex;
+    border-radius: 10px;
+    background-color: #fffcf1;
+    border: 1px solid #ffe8a3;
+    padding: 20px;
+}
+.review_lecture_proposal_radio_button_div {
+    display: block;
+}
+.comments_section {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    padding-top: 15px;
+	    gap: 2rem;
+}
+.review_lecture_proposal_radio_button_review_status .select_dropdown_review {
+    width: 45%;
+}
+.review_lecture_proposal_radio_button_review_status div:nth-child(2) {
+    width: 50%;
+}
+.cdo_submission_checkbox_content_lecture {
+    text-align: left!important;
+}
+.comments_section div {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+.comments_section div select {
+    background: white;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    background-image: linear-gradient(45deg, transparent 50%, #757575 50%), linear-gradient(135deg, #757575 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+.comments_section div  textarea {
+    width: 50%;
+}
+.comments_section label {
+    font-size: 15px;
+    white-space: nowrap;
+}
+.comments_section .select_dropdown_review {
+    display: grid;
+}
+.form-check.cdo_submission_checkbox_lecture input {
+    margin-left: 0px;
+}
+.accordian {
+    display: inline-grid;
+	width:100%
+}
+.accordian .acc-item {
+    display: list-item;
+    margin-left: 20px;
+	 list-style: auto;
+}
+.accordian .acc-item button.accordion {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    color: #ff8f00;
+}
+.accordian .acc-item button.accordion:after {
+    content: "";
+    width: 90%;
+    position: absolute;
+    border-top: 2px dashed grey;
+    top: 7px;
+}
+.heading_lecture {
+    text-align: left;
+}
+.heading_lecture h3 {
+    margin: 0px;
+}
+.review_lecture_proposal_radio_button_review_status {
+    display: block;
+    padding-top: 30px;
+}
+label.right_side_divisoin {
+    width: 250px;
+}
+.accordian .acc-item button.accordion i.fa.fa-caret-up {
+    position: absolute;
+    right: 18px;
+    font-size: 25px;
+    top: -4px;
+    color: grey;
+}
+.review_lecture_proposal_radio_button_review_status select.classic {
+    height: fit-content;
+}
+.review_lecture_proposal_radio_button_review_status .cdo-form_button {
+    height: fit-content;
+	    width: 20%;
+}
+.lecture_form_left p:nth-child(2) {
+    color: #ff8f00;
+	font-size: 15px;
+}
+.lecture_form_left p {
+    font-size: 15px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+.lecture_abstract_left p {
+    float: left;
+    margin: 0px;
+}
+.cdo-form_button.review_lecture_proposals_submit_btn {
+    background: #e6e6e6;
+    border: 2px solid #b8b8b8;
+    border-radius: 15px;
+    padding: 10px 30px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+    right: 60px;
+}
+.cdo-form_button.review_lecture_proposals_submit_btn button {
+    border: unset;
+    background-color: unset;
+    font-weight: bold;
+    font-size: 20px;
+}
+.accordian .acc-item button.accordion i.fa.fa-caret-down {
+    position: absolute;
+    right: 18px;
+    font-size: 25px;
+    top: -4px;
+    color: grey;
+}
+body .cdo_submission_checkbox_content p {
+    font-size: 9px;
+    margin: 0px;
+    padding-top: 0px!important;
+    padding-left: 0px!important;
+}
+body .cdo-form form.cdo-form_div div.cdo-flex_form_heading_lecture {
+    display: block;
+    text-align-last: left;
+    margin: 0px 0px;
+    position: relative;
+    right: 115px;
+}
+
+.cdo-form form.cdo-form_div div.cdo-flex_form_heading_lecture h3 {
+    font-size: 21px;
+	color:#000;
+}
+.error {
+    justify-self: unset!important;
+    text-align-last: left;
+}
+#confirm_check {
+    width: 310px!important;
+    height: 16px;
+    position: relative;
+    right: -94px;
+    top: 23px;
+}
+span.confirm_lecturer {
+    white-space: nowrap;
+    margin-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+label#cdo_LectureEnglishBiography_en_SL\[\]-error {
+    position: absolute;
+}
+label#cdo_LectureEnglishAbstract_en_SL\[\]-error {
+    position: absolute;
+}
+.cdo-flex_form_heading_lecture h2.thank_title {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    font-family: sans-serif;
+}
+.first-lecture-button p.flexRadioDefault1, .second-lecture-button p.flexRadioDefault2, .third-first-btn p.flexRadioDefault4, .third-second-btn p.flexRadioDefault4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.first-lecture-button a.firstlecture_traget_div span.session-link {
+    font-size: 20px!important;
+}
+.second-lecture-button span.proposal-link {
+    font-size: 20px!important;
+}
+.wujs-home-link .wujs-home a.wujs-home-link {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.singlw_single_proposals span.for_single_proposals {
+    font-size: 15px;
+}
+.second-lecture-button {
+    margin-bottom: 10px;
+}
+.cdo-form.cdo-single_lecture_proposal_form textarea, .cdo-form.cdo-single_lecture_proposal_form input, .cdo-form.cdo-single_lecture_proposal_form select {
+    text-align-last: left;
+    color: #000;
+    font-size: 15px;
+    padding: 5px;
+}
+.error{ justify-self: center;color: red;}
+#confirm_check{ width:auto;} 
+.first-lecture-button,.second-lecture-button { border: 1px solid #B8B8B8;  background-color: #E6E6E6;   border-radius: 22px;}
+h2.thank_title { font-size: 30px !important;  font-weight: bold !important;font-family: sans-serif; }
+p.flexRadioDefault1, p.flexRadioDefault2,p.flexRadioDefault4,p.flexRadioDefault4{ font-family: sans-serif;font-size: 29px;font-weight: bold;line-height: 30px; }
+.third-first-btn {    float: left;  width: 30%;   border: 1px solid #B8B8B8;  background-color: #E6E6E6;border-radius: 22px; }
+.third-second-btn { border: 2px solid #C7C7C5;background-color: #E6E6E6; border-radius: 22px;width: 68%;float: right;}
+.wujs-home a {   text-align: center !important; clear: both; }
+.session-link{   color: black; font-size: 25px;}
+.proposal-link{ text-decoration:underline;font-size: 30px !important;  font-weight: bold !important;font-family: sans-serif;}
+.first-lecture-button a.firstlecture_traget_div{ text-decoration: none ; }
+.cdo_grid_form.border.secondlecturer_div div {
+    height: fit-content;
+}
+.cdo-form form.cdo-form_div div label.error {
+    font-size: 15px;
+    text-align-last: left!important;
+    white-space: unset;
+ }
+.cdo_LectureHebrewBiographyright {
+    height: fit-content;
+}
+.cdo-form.cdo-proposal_session_review_form .cdo-form_div .cdo-form_button input#cdo_submitter_submit {
+    background: #e6e6e6;
+    border: 2px solid #b8b8b8;
+    border-radius: 20px;
+    padding: 15px 30px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 600;
+}
+.chairperson_btndiv input#chairperson_btn_check {
+    width: fit-content;
+    margin-top: 7px;
+}
+.cdo_lecturer_btdiv input[type="checkbox"] {
+    width: fit-content!important;
+    margin-top: 7px!important;
+}
+/****
+09-06-2023
+*/
+.right_to_left{
+direction: rtl !important;
+text-align-last: right !important;
+}
+select.right_to_left{
+    padding-right: 30px !important;
+}
+label#cdo_chair_emailname_en_SP-error {
+    position: absolute;
+    bottom: -27px;
+    font-size: 14px;
+}
+.cdo-form_div .form_error {
+    text-align-last: right!important;
+}
+
+span.cdo-session-chairpersonlabel {
+    position: absolute;
+    top: 40%;
+    left: 14%;
+    font-size: 15px;
+}
+.right_to_left_error_H {
+    position: absolute;
+    right: 0;
+    font-size: 14px!important;
+}
+.cdo_proposal_form.cdo_mobile_proposal_form .right_to_left_error_H {
+    position: absolute;
+    font-size: 12px!important;
+    bottom: -21px;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-blue,.jconfirm .jconfirm-box.jconfirm-type-red {
+   width: 36%!important;
+    margin: 0px auto!important;
+}
+body.page-id-6810 .jconfirm .jconfirm-box.jconfirm-type-blue {
+    width: 36%!important;
+     margin: 0px auto!important;
+ }
+ #cdo_session_proposal_form .chairperson_btndiv {
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+#cdo_session_proposal_form.right_to_left_H .chairperson_btndiv {
+    grid-template-columns: 49% 3%;
+}
+#cdo_session_proposal_form.right_to_left_H p.cdo_text_info {
+    position: relative;
+    margin: 0;
+    margin-left: -64px;
+    width: 100%;
+}
+#cdo_updatememberform input#cdo_email {
+    width: 97.5%!important;
+}
+#cdo_updatememberform input#cdo_street {
+    width: 97.5%!important;
+}
+.cdo-form form.cdo-form_div.right_to_left_H div input, .cdo-form form.cdo-form_div.right_to_left_H div label.error, .cdo-form form.cdo-form_div.right_to_left_H div textarea, .cdo-form form.cdo-form_div.right_to_left_H div label, .cdo-form form.cdo-form_div.right_to_left_H div select {
+    text-align-last: right !important;
+    text-align: right;
+    width: 100% !important;
+}
+.cdo-form form.cdo-form_div.right_to_left_H div select.classic {
+    padding-right: 37px!important;
+}
+.cdo-form form.cdo-form_div.right_to_left_H div input#cdo_lecturer_btn {
+    width: fit-content!important;
+}
+.cdo-form form.cdo-form_div.right_to_left_H span.cdo-session-lecturerform.cdo_my_personal_Info {
+    position: relative!important;
+    top: 74px!important;
+    left: 120px!important;
+    font-size: 15px!important;
+}
+#added_as_lecture_to_session span.cdo-session-lecturerform.cdo_my_personal_Info {
+    position: relative!important;
+    top: 74px!important;
+    left: 120px!important;
+    font-size: 15px!important;
+}
+/ start login page style /
+.main_loginpage_div {
+    display: flex;
+}
+.loginpage_left_div {
+    width: 50%;
+}
+.loginpage_right_div {
+    width: 50%;
+}
+form#cdo_login_form div {
+    display: block!important;
+}
+form#cdo_login_form div div {
+    display: inline-block;
+    width: 49%;
+}
+form#cdo_login_form div div:first-child label {
+    display: block;
+    float: left;
+}
+
+/**
+ extra css to set the design
+*/
+.cdo-form.cdo-new_member_form form#cdo_updatememberform div input {
+    width: 100%;
+}
+@media screen and (max-width:1200px){
+   
+     #confirm_check {
+        width: 310px!important;
+        height: 16px;
+        position: relative;
+        right: -94px;
+        top: 23px;
+    }
+}
+@media screen and (min-width:1001px) and (max-width:1200px){
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-para p {
+       margin-right: -45px;
+    }
+    }
+@media screen and (min-width:1145px) and (max-width:1200px){
+p.cdo_text_info_hebrew {
+   margin-left: 470px;
+  }
+}
+@media screen and (min-width:1100px) and (max-width:1144px){
+p.cdo_text_info_hebrew {
+   margin-left: 430px;
+  }
+  #confirm_check {
+   right: -91px;
+}
+}
+@media screen and (min-width:1050px) and (max-width:1099px){
+p.cdo_text_info_hebrew {
+   margin-left: 400px;
+  }
+  .sidebar {
+    width: 170px;
+  }
+  #confirm_check {
+  right: -79px;
+}
+#added_as_lecture_to_session span.cdo-session-lecturerform.cdo_my_personal_Info{
+    left: 90px!important;
+ }
+}
+@media screen and (min-width:1000px) and (max-width:1049px){
+p.cdo_text_info_hebrew {
+   margin-left: 370px;
+  }
+  .sidebar {
+    width: 170px;
+  }
+  #confirm_check {
+    width: auto!important;
+    height: 16px;
+    position: relative;
+    right: -123px;
+    top: 23px;
+}
+.cdo-form form.cdo-form_div.right_to_left_H span.cdo-session-lecturerform.cdo_my_personal_Info {
+   left: 100px;
+}
+#added_as_lecture_to_session span.cdo-session-lecturerform.cdo_my_personal_Info{
+    left: 100px!important;
+ }
+}
+@media screen and (min-width:900px) and (max-width:999px){
+p.cdo_text_info_hebrew {
+   margin-left: 370px;
+  }
+}
+
+  
+@media screen and (max-width:1000px){
+    .cdo-form{
+        width: 100%; 
+        padding: 0px 10px;
+    }
+	/*added extra style to make responsive */
+	.cdo-form.cdo-form_register,
+	.cdo-form.cdo-form_login{
+		padding:30px;
+		max-width:600px;
+	}
+	.cdo-form.cdo-form_register form.cdo-form_div div,
+	.cdo-form.cdo-form_login form.cdo-form_div div{
+		grid-template-columns: 49% 49%;
+	}
+	.cdo-form.cdo-new_member_form form.cdo-form_div .cdo-flex_form {
+    display: block !important;
+	}
+	.cdo-form.cdo-new_member_form form#cdo_updatememberform div input{
+		    width: 100%;
+	}
+	/* ended extra style */
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-flex_form, .cdo-form.cdo-new_member_form form.cdo-form_div div.cdo-form_button{
+        grid-template-columns: auto;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-block_form, .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-flex_form{
+        padding: 0 3%;
+    }
+    .cdo-form form.cdo-form_div .cdo-form_button button{
+        padding: 10px 15px;
+    }
+    .cdo-form form.cdo-form_div div label{
+        white-space: initial;
+        text-align: right;
+    }
+    .cdo-form form.cdo-form_div div{
+        padding: 0 10px 0 0;
+        width: 100%;
+       grid-template-columns: auto;
+       text-align-last: start;
+    }
+    .cdo-form form.cdo-form_div .cdo-form_button button:first-child{
+        justify-self: center;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div div, .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-block_form div{
+        grid-template-columns: 43% 54%;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-radio_role{
+        grid-template-columns: 32% 11% 38% 12%;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-radio_role.cdo-grid_para{
+        display: flex;
+        flex-flow: wrap;
+        place-content: end;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-radio_role.cdo-grid_para > label:first-child{
+        width: 100%;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-para p{
+        left: unset;
+        right: -10px
+    }
+    .cdo-form form.cdo-form_div div i.fa-light.fa-eye-slash {
+        position: absolute;
+        right: -7px;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div div {
+        padding: initial;
+    }
+    .cdo-form form.cdo-form_div .cdo-form_button{
+        padding:10px 0px;
+    }
+  .cdo-form form.cdo-form_div .cdo_grid_form {
+    grid-template-columns: 49% 49%;
+    width: 100%;
+    margin: 0px 0px 0px auto;
+    padding: 0 0 0 1%;
+    margin-top: 30px;
+}
+p.cdo_text_info_hebrew {
+    margin-left: 0px;
+    text-align: center;
+    width: 100%;
+}
+.cdo-para_single {
+    width: 100%!important;
+    margin-left: 0px!important;
+}
+p.cdo_text_info {
+    margin-left: 0px;
+    width: 100%;
+    padding-top: 56px;
+}
+.cdo-form form.cdo-form_div div {
+   width: 100%;
+   text-align-last: start;
+  }
+.email_address {
+    grid-template-columns: auto!important;
+    padding: 0px 10px!important;
+    margin-bottom: 25px!important;
+}
+.cdo-flex_form div {
+    width: 100%!important;
+    margin-left: 2%!important;
+}
+.cdo-form form.cdo-form_div div {
+    margin: 0px auto;
+	 margin-left: 0%!important;
+	 display:block;
+	 padding:5px;
+   }
+   .cdo_mobile_proposal_form {
+    padding: 0px 0px 0px 0px!important;
+}
+p.cdo_text_info_hebrew {
+    margin-top: 0px;
+    line-height: 16px;
+}
+  p.cdo_text_info br {
+    display: none;
+}
+.proposal_content p {
+    text-align: center;
+}
+.cdo-form form.cdo-form_div .cdo_sess_proposal_form {
+    grid-template-columns: 49% 49%;
+    width: 100%;
+    padding-bottom: 30px!important;
+    margin-top: 50px;
+}
+.cdo-flex_form.bottom_second_row_form > label {
+    padding: 0px 12px;
+    margin-top: 10px;
+    }
+.cdo_sess_proposal_form.border:before {
+   position: absolute;
+    top: -20%;
+    left: 0%;
+    font-size: 15px;
+}
+.cdo-flex_form.bottom_second_row_form {
+    grid-template-columns: auto!important;
+    margin-bottom: 40px!important;
+}
+ .cdo_proposal_form .bottom_second_row_form:first-child label {
+    margin-top: 0px;
+}
+.cdo-form form.cdo-form_div .cdo_lecture_to_session_form {
+    grid-template-columns: auto;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.cdo-form form.cdo-form_div .cdo_lecture_to_session_form:before {
+  position: relative;
+    top: 48%;
+    left: 0%;
+   }
+.cdo-form form.cdo-form_div div.cdo-flex_form_heading, .cdo-form form.cdo-form_div div.cdo-flex_form_heading div {
+  	padding: 0px;
+    margin-left: 6px;
+}
+	.cdo-form form.cdo-form_div div.cdo-flex_form_heading, .cdo-form form.cdo-form_div div.cdo-flex_form_heading div h3 {
+  margin-left: 0px!important;
+}
+.email_address_proposal_session_review {
+    grid-template-columns: auto!important;
+    padding: 0px 10px!important;
+    margin-bottom: 15px!important;
+}
+p.cdo_text_inf_orecommention_form {
+    width: 98%;
+  }
+.cdo_email_address_recommention_form {
+    grid-template-columns: auto!important;
+    padding: 0px 10px!important;
+}
+	.cdo-form form.cdo-form_div div.cdo-flex_form_heading_lecture {
+    margin-left: 12px!important;
+}
+.cdo_submission_checkbox_content p {
+ 	padding-left: 5px;
+}
+.accordian .acc-item button.accordion:after {
+  width: 85%;
+  top: 7px;
+	}
+.panel p {
+    text-align: left;
+}
+.review_lecture_proposal_boxes div {
+    width: 100%;
+}
+.review_lecture_proposal_boxes {
+ flex-wrap: wrap;
+}
+.lecture_abstract_keyboard {
+   flex-wrap: wrap;
+}
+.lecture_abstract_left {
+    width: 100%;
+}
+.cdo-flex_form.cdo_submission_top_lecture {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.comments_section {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.review_lecture_proposal_radio_button_review_status div:nth-child(2) {
+    width: 100%;
+    padding: 0px 2%;
+}
+.review_lecture_proposal_radio_button_review_status .select_dropdown_review {
+    width: 100%;
+    padding: 0px 2%;
+}
+.comments_section div  textarea {
+    width: 100%;
+}
+label.right_side_divisoin {
+    width: 100%;
+}
+.cdo-form.cdo-review_lecture_proposals_form {
+   padding-top: 20px;
+}
+.cdo-form_button.review_lecture_proposals_submit_btn {
+    position: unset;
+    margin-bottom: 20px;
+}
+.comments_section div {
+  display: grid;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+}
+.sidebar a.active {
+    width: auto;
+ }
+ .sidebar a:hover:not(.active) {
+     width: auto;
+ }
+ .cdo-form.cdo-proposal_session_review_form {
+    width: 100%;
+    margin-top: 80px;
+}
+.sidebar {
+  margin-top: 10px!important;
+}
+.sidebar {
+   top: 0;
+}
+.sidebar a {
+  width: auto;
+}
+.wujs-home-link .wujs-home a.wujs-home-link {
+   padding-bottom: 20px;
+}
+.cdo-form form.cdo-form_div div {
+    display: block;
+}
+.cdo-form.cdo-single_lecture_proposal_form textarea, .cdo-form.cdo-single_lecture_proposal_form input, .cdo-form.cdo-single_lecture_proposal_form select {
+    width: 100%;
+}
+#confirm_check {
+    width: auto!important;
+    right: -3px;
+    top: 2px;
+}
+span.confirm_lecturer {
+    font-size: 14px;
+    margin-left: 15px;
+}
+    label.right_to_left {
+        float: right;
+        margin-right: 3px!important;
+    }
+    .cdo-form_div .form_error {
+        text-align-last: left!important;
+    }
+   
+    .cdo-form_div textarea#cdo_sessionabstract_en_SP {
+        width: 100%;
+     }
+     .cdo-form_div textarea#cdo_sessionabstract_pt_SP {
+      width: 100%;
+     }
+     #cdo_session_proposal_form .form_error {
+        text-align-last: left!important;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div .cdo-para p {
+       margin-right: unset;
+    }
+    .cdo-form.cdo-new_member_form form.cdo-form_div div {
+        display: block;
+        text-align-last: left;
+    }
+    .right_to_left_error_H {
+        position: absolute!important;
+        right: 5px!important;
+        bottom: -21px;
+    }
+  label.right_to_left {
+        padding: 10px;
+    }
+    #added_as_lecture_to_session textarea#cdo_sessionLecture_biography_en_SL {
+       width: 100%;
+    }
+    #added_as_lecture_to_session textarea#cdo_sessionLecture_biography_pt_SL {
+       width: 100%;
+    }
+    #added_as_lecture_to_session textarea#cdo_sessionLecture_abstract_en_SL {
+        width: 100%;
+    }
+    #added_as_lecture_to_session textarea#cdo_sessionLecture_abstract_pt_SL {
+       width: 100%;
+    }
+    #added_as_lecture_to_session textarea#w3review {
+        width: 100%;
+    }
+    #added_as_lecture_to_session textarea#w3review2 {
+        width: 100%;
+    }
+    .cdo-para_single p br {
+        display: none;
+    }
+    .cdo-para_single p {
+       text-align: left;
+        text-align-last: left;
+    }
+    p.cdo_text_info {
+        text-align-last: left;
+        margin-top: 0px!important;
+    }
+    .singleLectureProposalForm_confirm_check_mobile {
+        padding-top: 35px!important;
+    }
+    #cdo_session_proposal_form .chairperson_btndiv {
+        margin-top: -15px;
+    }
+    #cdo_session_proposal_form p.cdo_text_info {
+        top: 22px;
+    }
+    #cdo_updatememberform .cdo-form_button {
+        text-align-last: center!important;
+        margin-top: 20px!important;
+        margin-bottom: 20px!important;
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div {
+        direction: rtl;
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div .error {
+        display: block;
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div label {
+        display: block;
+    }
+    form.right_to_left_H div.cdo-para_single p {
+        text-align: right;
+        text-align-last: right;
+    }
+    .cdo-form form.cdo-form_div.right_to_left_H div select.classic {
+      
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div p.cdo_text_info {
+        text-align-last: center;
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div label {
+       margin-right: 8px;
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div input.cdo_memberdisable {
+        margin-right: 0px!important;
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div input[type="text"] {
+        margin-right: 0px;
+    }
+    .cdo-form form.right_to_left_H.cdo-form_div div input[type="email"] {
+        margin-right: 0px;
+    }
+    #cdo_updatememberform input#cdo_email {
+        width: 100%!important;
+    }
+    #cdo_updatememberform input#cdo_street {
+        width: 100%!important;
+    }
+    .cdo-form form.cdo-form_div.right_to_left_H .cdo-para p {
+        text-align-last: right;
+        margin-top: 10px!important;
+    }
+    .cdo-form form.cdo-form_div.right_to_left_H .chairperson_btndiv,.cdo-form form.cdo-form_div.right_to_left_H .cdo_lecturer_btdiv {
+        display: flex;
+        width: fit-content!important;
+        margin: 0;
+        gap: 10px;
+    }
+    .cdo-form form.cdo-form_div.right_to_left_H label {
+        white-space: nowrap;
+    }
+    .cdo-form form.cdo-form_div.right_to_left_H span.cdo-session-lecturerform.cdo_my_personal_Info {
+        position: unset;
+        padding-left: 10px;
+    }
+    #added_as_lecture_to_session span.cdo-session-lecturerform.cdo_my_personal_Info {
+        position: unset!important;
+        padding-left: 10px!important;
+    }
+    span.cdo-session-chairpersonlabel {
+        position: relative;
+        left: 2%;
+        margin-top: 40px!important;
+        float: left;
+        margin-bottom: 20px;
+    }
+  
+}
+@media screen and (max-width:767px){
+.cdo_radio_button_form {
+    display: block!important;
+}
+	.cdo_submission_checkbox_content p {
+    padding-left: 0px;
+}
+.form-check.cdo_submission_checkbox {
+    grid-template-columns: 4% 96%!important;
+  }
+.accordian .acc-item button.accordion:after {
+    width: 80%;
+   }
+.review_lecture_proposal_subtitle p {
+    padding-right: 0;
+    text-align: left;
+}
+.lecture_form_left {
+    width: 100%;
+   flex-wrap: wrap;
+}
+.third-first-btn {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.third-second-btn {
+    width: 100%;
+}
+.cdo-form form.cdo-form_div .cdo-form_button button {
+   font-size: 16px;
+}
+.jconfirm .jconfirm-box.jconfirm-type-blue {
+    width: 68%!important;
+    margin: 0px auto!important;
+    font-size: 14px;
+}
+.jconfirm .jconfirm-box.jconfirm-type-red {
+    width: 68%!important;
+    margin: 0px auto!important;
+    font-size: 14px;
+}
+.cdo-form form.cdo-form_div div label br {
+    display: none;
+}
+body.page-id-6810 .jconfirm .jconfirm-box.jconfirm-type-blue {
+    width: 68%!important;
+     margin: 0px auto!important;
+ }
+}
+@media screen and (min-width:650px) and (max-width:767px){
+.accordian .acc-item button.accordion:after {
+    width: 82%;
+ }
+}
+@media screen and (min-width:500px) and (max-width:600px){
+.accordian .acc-item button.accordion:after {
+    width:76%;
+ }
+}
+@media screen and (min-width:430px) and (max-width:499px){
+.accordian .acc-item button.accordion:after {
+    width:71%;
+ }
+}
+
+@media screen and (max-width:500px){
+.cdo-form form.cdo-form_div .cdo-form_button{
+text-align-last: center;
+    text-align: center;
+}
+.cdo-form form.cdo-form_div .cdo-form_button button {
+  font-size: 15px;
+   }
+.lecture_form {
+    display: grid;
+}
+ .singleLectureProposalForm_confirm_check_mobile {
+    margin-top: 40px!important;
+	 margin-bottom: 15px!important;
+}
+#confirm_check {
+   float: left;
+}
+span.confirm_lecturer {
+    white-space: initial;
+    }
+    div p.cdo_text_info {
+       padding-left: 0px!important;
+    }
+    div.cdo-para_single p {
+       padding-left: 0px!important;
+    }
+    .cdo-para_single p {
+        text-align: left;
+        text-align-last: left;
+    }
+    p.cdo_text_info {
+       text-align-last: left;
+    }
+    body .cdo-form.cdo-form_login {
+        padding: 20px 1rem;
+    }
+    body .singleLectureProposalForm_confirm_check_mobile {
+        width: fit-content!important;
+    }
+    .cdo-form form.cdo-form_div.right_to_left_H #confirm_check {
+        float: unset;
+    }
+    .cdo-form form.cdo-form_div.right_to_left_H #confirm_check {
+        float: unset;
+    }
+}
+@media screen and (max-width:480px){
+.cdo-form form.cdo-form_div .cdo_grid_form {
+    grid-template-columns: auto;
+   }
+   .cdo-form form.cdo-form_div div {
+  grid-gap: 0%;
+ }
+ .cdo-flex_form div {
+  margin-left: 0%!important;
+}
+.cdo-form form.cdo-form_div div {
+    padding: 0 4px 0 0;
+ }
+ .cdo-form form.cdo-form_div div {
+    margin: 5px auto;
+    padding-top: 8px;
+}
+ .cdo-form form.cdo-form_div div label {
+ padding: 0px 0px;
+    margin-bottom: 10px;
+}
+.cdo-form form.cdo-form_div div label {
+   text-align: right;
+}
+.cdo-form form.cdo-form_div div label br {
+    display: none;
+}
+.cdo-form form.cdo-form_div .cdo-form_button {
+    display: block;
+}
+.cdo-form form.cdo-form_div .cdo-form_button button:first-child {
+   margin-bottom: 20px;
+   margin-top: 20px;
+}
+.cdo-para_single p br {
+    display: none;
+}
+.cdo-form form.cdo-form_div .cdo-form_button button {
+    font-size: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+  .cdo_mobile_proposal_form .cdo-flex_form {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.cdo_single_lecture_form_mobile {
+    padding: 0px!important;
+}
+.cdo-form form.cdo-form_div .cdo_sess_proposal_form {
+    grid-template-columns: auto;
+   }
+   .cdo_sess_proposal_form.border:before {
+    top: -7%;
+ }
+ .cdo-flex_form.bottom_second_row_form {
+  margin-bottom: 0px!important;
+}
+	.cdo-form form.cdo-form_div div.cdo-flex_form_heading, .cdo-form form.cdo-form_div div.cdo-flex_form_heading div h3 {
+   font-size: 15px;
+}
+	.cdo-flex_form.cdo_top_title_heading {
+    margin-top: 10px!important;
+}
+	.cdo-form.cdo-proposal_session_review_form .cdo-form_div div {
+    margin: 5px auto;
+}
+.email_address_proposal_session_review {
+    grid-template-columns: auto!important;
+    margin-bottom: 15px!important;
+    padding: 0px 6px 0px 0px!important;
+}
+.cdo-form.cdo-proposal_session_review_form .cdo-form_div .cdo-form_button button {
+    font-size: 14px;
+  }
+	.cdo_email_address_recommention_form {
+    grid-template-columns: auto!important;
+    margin-bottom: 15px!important;
+    padding: 0px 6px 0px 0px!important;
+}
+.cdo-flex_form_heading_lecture h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+.cdo-form form.cdo-form_div div.cdo-flex_form_heading_lecture {
+    margin-left: 5px!important;
+}
+	.form-check.cdo_submission_checkbox {
+    grid-template-columns: 7% 93%!important;
+}
+	.cdo_submission_checkbox_content label.form-check-label {
+    margin-bottom: 0px!important;
+}
+	.cdo_submission_checkbox_content {
+    padding-left: 20px!important;
+}
+.lecture_abstract_left p:last-child {
+  font-size: 13px;
+}
+.lecture_abstract_left p {
+   font-size: 15px;
+}
+.panel p {
+  font-size: 13px;
+}
+.review_lecture_proposal_boxes p {
+    font-size: 13px;
+    margin: 0px;
+}
+.sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .cdo-form form.cdo-form_div .cdo_sess_proposal_form {
+    margin-top: 115px!important;
+}
+p.cdo_text_info {
+   text-align-last: left;
+}
+.cdo-form .cdo-google {
+    font-size: 14px;
+    margin-top: 15px;
+}
+.cdo-para_single p {
+    text-align: left;
+    text-align-last: left;
+}
+.right_to_left_error_H {
+    position: absolute!important;
+    right: 5px!important;
+    bottom: -34px;
+}
+label.right_to_left {
+    font-size: 12px!important;
+    padding-top: 13px!important;
+}
+#added_as_lecture_to_session .cdo-flex_form p.cdo_text_info_hebrew {
+    position: unset;
+    margin-bottom: 0px!important;
+    line-height: 20px!important;
+    padding-bottom: 0px!important;
+    padding-left: 0px!important;
+    text-align: left!important;
+    text-align-last: left;
+}
+.cdo_mobile_proposal_form {
+    margin-top: 25px!important;
+}
+
+.cdo_proposal_form.cdo_mobile_proposal_form .right_to_left_error_H {
+    position: absolute!important;
+    font-size: 12px!important;
+    bottom: -35px;
+}
+.foreign-passport-input {
+    position: absolute!important;
+    top: 28px;
+    left: 150px;
+}
+label.foreign-passport-label {
+    position: absolute;
+    left: 0;
+    top: 38px;
+}
+.cdo-radio_role {
+    height: 100px;
+}
+
+.cdo-form form.cdo-form_div.right_to_left_H label {
+    white-space: unset;
+}
+.cdo-form form.cdo-form_div.right_to_left_H span.cdo-session-lecturerform.cdo_my_personal_Info {
+    position: unset;
+    padding-left: 0px;
+}
+#added_as_lecture_to_session span.cdo-session-lecturerform.cdo_my_personal_Info {
+    position: unset!important;
+    padding-left: 0px!important;
+}
+}
+@media screen and (min-width:370px) and (max-width:429px){
+.accordian .acc-item button.accordion:after {
+    width:64%!important;
+ }
+ span.cdo-session-chairpersonlabel {
+    margin-top: 80px!important;
+}
+}
+@media screen and (min-width:320px) and (max-width:369px){
+.accordian .acc-item button.accordion:after {
+    width:57%!important;
+ }
+ .cdo-form form.cdo-form_div div label.error {
+    font-size: 11px;
+  }
+  .cdo-form form.cdo-form_div div label {
+    font-size: 10px;
+}
+.foreign-passport-input {
+    position: absolute!important;
+    top: 31px;
+    left: 115px;
+}
+span.cdo-session-chairpersonlabel {
+    margin-top: 80px!important;
+}
+}
